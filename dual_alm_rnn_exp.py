@@ -422,7 +422,7 @@ class DualALMRNNExp(object):
 
 
 
-    def train_type_within_hemi_only(self):
+    def train_type_modular(self):
 
 
         random_seed = self.configs['random_seed']
@@ -434,7 +434,7 @@ class DualALMRNNExp(object):
         model_type = self.configs['model_type']
 
 
-        self.init_sub_path('train_type_within_hemi_only')
+        self.init_sub_path('train_type_modular')
 
 
         model_save_path = os.path.join(self.configs['models_dir'], model_type, self.sub_path)

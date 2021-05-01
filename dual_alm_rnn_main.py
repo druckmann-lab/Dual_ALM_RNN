@@ -13,7 +13,7 @@ def parse_args():
 
     parser.add_argument('--train_type_uniform', action='store_true', default=False)
 
-    parser.add_argument('--train_type_within_hemi_only', action='store_true', default=False)
+    parser.add_argument('--train_type_modular', action='store_true', default=False)
 
     parser.add_argument('--plot_cd_traces', action='store_true', default=False)
 
@@ -33,9 +33,9 @@ def main():
         exp = DualALMRNNExp()
         exp.train_type_uniform()
 
-    if args.train_type_within_hemi_only:
+    if args.train_type_modular:
         exp = DualALMRNNExp()
-        exp.train_type_within_hemi_only()
+        exp.train_type_modular()
 
     if args.plot_cd_traces:
         exp = DualALMRNNExp()
